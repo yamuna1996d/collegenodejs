@@ -11,8 +11,8 @@ app.get('/register',(req,res)=>{
     var roll=req.body.getroll;
     var adno=req.body.getadno;
     var college=req.body.getcollege;
-    // res.send("Name" + na + "Rollno :" +roll + "Admission Number" + adno +"College" + college);
-    res.json(req.body);
+    res.send("Name" + na + "Rollno :" +roll + "Admission Number" + adno +"College" + college);
+    // res.json(req.body);
 });
 app.listen(process.env.PORT || 3000,()=>{
     console.log("Server Started");
