@@ -2,7 +2,7 @@ var express = require('express');
 var parser=require('body-parser');
 var app=express();
 app.use(parser.urlencoded({extended:false}));
-app.post('/',(req,res)=>{
+app.get('/',(req,res)=>{
     var na = req.body.getname;
     var roll=req.body.getroll;
     var adno=req.body.getadno;
