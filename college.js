@@ -2,7 +2,7 @@ var express = require('express');
 var parser=require('body-parser');
 var app=express();
 app.use(parser.urlencoded({extended:false}));
-app.get('/',(req,res)=>{
+app.post('/',(req,res)=>{
     var na = req.body.getname;
     var roll=req.body.getroll;
     var adno=req.body.getadno;
@@ -12,4 +12,4 @@ app.get('/',(req,res)=>{
 });
 app.listen(process.env.PORT || 3000,()=>{
     console.log("Server Started");
-})
+});
