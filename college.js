@@ -3,10 +3,10 @@ var express =require('express');
 var parser=require('body-parser');
 var app=express();
 app.use(parser.urlencoded({extended:false}));
+// app.get('/',(req,res)=>{
+//     res.send("hai..");
+// })
 app.get('/',(req,res)=>{
-    res.send("hai..");
-})
-app.get('/register',(req,res)=>{
     var na = req.body.getname;
     var roll=req.body.getroll;
     var adno=req.body.getadno;
