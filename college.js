@@ -19,7 +19,7 @@ mongoose.connect("mongodb+srv://dbuser:ava1996@cluster0-ffwzj.mongodb.net/test?r
 app.get('/',(req,res)=>{
     res.send("hai..");
 });
-app.post('/register',(req,res)=>{
+app.post('/register',async(req,res)=>{
     // var getna = req.body.name;
     // var getroll=req.body.roll;
     // var getadno=req.body.adno;
@@ -28,7 +28,7 @@ app.post('/register',(req,res)=>{
 
     try{
         var studentdata= new studmodel(req.body);
-        var result= studentdata.save();
+        var result= await studentdata.save();
         res.json(result);
         //res.json(req.body);
     }
