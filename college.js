@@ -28,7 +28,7 @@ app.get('/register',(req,res)=>{
 
     try{
         var studentdata= new studmodel(req.body);
-        var result=await studentdata.save();
+        var result= studentdata.save();
         res.json(result);
         //res.json(req.body);
     }
