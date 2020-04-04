@@ -19,7 +19,7 @@ mongoose.connect("mongodb+srv://dbuser:ava1996@cluster0-ffwzj.mongodb.net/test?r
 app.get('/',(req,res)=>{
     res.send("hai..");
 });
-app.get('/register',(req,res)=>{
+app.post('/register',(req,res)=>{
     // var getna = req.body.name;
     // var getroll=req.body.roll;
     // var getadno=req.body.adno;
